@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -17,11 +18,16 @@ namespace ThreadChat
         public ThreadChatForm1()
         {
             InitializeComponent();
+
+            client = new Client(this);
+
+            ThreadPool.QueueUserWorkItem(client.Run);
+
         }
 
         private void btnSend_Click(object sender, EventArgs e)
         {
-
+            client.SendMessage(sendMessageBox1.Text);
         }
 
 
@@ -31,8 +37,8 @@ namespace ThreadChat
             //if (textBox1.Text != strMyOriginalText)
             //{
                 // Display a MsgBox asking the user to save changes or abort.
-                if (MessageBox.Show("Do you want to save changes to your text?", "My Application",
-                   MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (MessageBox.Show("Close chat application?", "ThreadChatClient",
+                   MessageBoxButtons.YesNo) == DialogResult.No)
                 {
                     // Cancel the Closing event from closing the form.
                     e.Cancel = true;

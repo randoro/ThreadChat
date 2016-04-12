@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ThreadChat
+namespace ThreadChatServer
 {
-    public partial class Form1 : Form
+    public partial class ThreadChatServerForm1 : Form
     {
-        public Form1()
+        public ThreadChatServerForm1()
         {
             InitializeComponent();
         }

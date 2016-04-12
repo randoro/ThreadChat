@@ -1,6 +1,6 @@
-﻿namespace ThreadChat
+﻿namespace ThreadChatServer
 {
-    partial class Form1
+    partial class ThreadChatServerForm1
     {
         /// <summary>
         /// Required designer variable.

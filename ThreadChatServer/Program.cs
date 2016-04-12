@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ThreadChat
+namespace ThreadChatServer
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace ThreadChat
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ThreadChatForm1());
+            Application.Run(new ThreadChatServerForm1());
         }
     }
 }

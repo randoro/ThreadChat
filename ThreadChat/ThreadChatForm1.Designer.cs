@@ -67,9 +67,9 @@
             this.Controls.Add(this.sendMessageBox1);
             this.Controls.Add(this.btnSend);
             this.Name = "ThreadChatForm1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.ThreadChatForm1_Load);
+            this.Text = "ThreadChat Client";
             this.Closing += new System.ComponentModel.CancelEventHandler(this.ThreadChatForm1_Closing);
+            this.Load += new System.EventHandler(this.ThreadChatForm1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

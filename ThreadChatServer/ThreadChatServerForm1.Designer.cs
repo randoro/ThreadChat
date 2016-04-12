@@ -28,26 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.sendButton1 = new System.Windows.Forms.Button();
+            this.sendAllButton1 = new System.Windows.Forms.Button();
             this.sendTextBox1 = new System.Windows.Forms.TextBox();
             this.chatRichTextBox1 = new System.Windows.Forms.RichTextBox();
             this.userListBox1 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
-            // sendButton1
+            // sendAllButton1
             // 
-            this.sendButton1.Location = new System.Drawing.Point(584, 13);
-            this.sendButton1.Name = "sendButton1";
-            this.sendButton1.Size = new System.Drawing.Size(75, 23);
-            this.sendButton1.TabIndex = 0;
-            this.sendButton1.Text = "Send To All";
-            this.sendButton1.UseVisualStyleBackColor = true;
+            this.sendAllButton1.Location = new System.Drawing.Point(555, 13);
+            this.sendAllButton1.Name = "sendAllButton1";
+            this.sendAllButton1.Size = new System.Drawing.Size(104, 23);
+            this.sendAllButton1.TabIndex = 0;
+            this.sendAllButton1.Text = "Send To All";
+            this.sendAllButton1.UseVisualStyleBackColor = true;
+            this.sendAllButton1.Click += new System.EventHandler(this.sendAllButton1_Click);
             // 
             // sendTextBox1
             // 
             this.sendTextBox1.Location = new System.Drawing.Point(13, 13);
             this.sendTextBox1.Name = "sendTextBox1";
-            this.sendTextBox1.Size = new System.Drawing.Size(565, 20);
+            this.sendTextBox1.Size = new System.Drawing.Size(535, 20);
             this.sendTextBox1.TabIndex = 1;
             // 
             // chatRichTextBox1
@@ -74,9 +75,11 @@
             this.Controls.Add(this.userListBox1);
             this.Controls.Add(this.chatRichTextBox1);
             this.Controls.Add(this.sendTextBox1);
-            this.Controls.Add(this.sendButton1);
+            this.Controls.Add(this.sendAllButton1);
             this.Name = "ThreadChatServerForm1";
-            this.Text = "Form1";
+            this.Text = "ThreadChat Server";
+            this.Closing += new System.ComponentModel.CancelEventHandler(this.ThreadChatServerForm1_Closing);
+            this.Load += new System.EventHandler(this.ThreadChatServerForm1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -84,7 +87,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button sendButton1;
+        private System.Windows.Forms.Button sendAllButton1;
         private System.Windows.Forms.TextBox sendTextBox1;
         private System.Windows.Forms.RichTextBox chatRichTextBox1;
         private System.Windows.Forms.ListBox userListBox1;
